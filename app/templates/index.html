@@ -6,11 +6,34 @@
     <title>Hello World</title>
 </head>
 <body>
-    <h1>Usuarios</h1>
+    
+    <h1>Criar Usuário</h1>
+    <form action="/novoUsuario" method="POST">
+        <label for="nome">Nome Usuário</label>
+        <input type="text" id="nome" name="nome_usuario" required>
+        <button type="submit">Cadastrar usuario</button>
+    </form>
+    <h1>Hello World</h1>
     <ul>
         {% for usuario in usuarios %}
-            <li>{{ usuario }}</li>
+            <li>
+                <form action = "{{url_for('hello.editarUsuario', usuario_id=usuario.id)}}", method="POST">
+                    <input type="text" name="nome_usuario" value="{{usuario.username}}" required>
+                    <button action = "submit">Atualizar</button>
+                </form>
+                
+                <form action = "{{url_for('hello.removerUsuario', usuario_id=usuario.id)}}", method="POST">
+                    <button action = "submit">Remover</button>
+                </form>
+            </li>
         {% endfor %}
     </ul>
+
+    <h1>Foto de cachorro</h1>
+    <ul>
+        <img src="https://images3.memedroid.com/images/UPLOADED421/5c60bd8dd292a.jpeg" />
+    </ul>
+
+        
 </body>
 </html>
