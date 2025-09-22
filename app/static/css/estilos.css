@@ -1,0 +1,44 @@
+body {
+  background: linear-gradient(135deg, #6e518e, #c9d6ee);
+  font-family: "Inter", Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* ===== Títulos ===== */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* ===== Botões ===== */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px; /* formato mais arredondado */
+  background: rgba(255, 255, 255, 0.9);
+  color: #2575fc;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: #fff;
+  transform: translateY(-2px); /* efeito de flutuar */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: scale(0.98); /* clique dá sensação de "pressionar" */
+}
